@@ -36,14 +36,14 @@ private fun consumer() {
     GlobalScope.launch {
         val result = producer()
         result.collect {
-            Log.d("MutableSharedFlow", "Item1 - $it")
+            Log.d("SharedFlow", "Item1 - $it")
         }
     }
     GlobalScope.launch {
         val result = producer()
         delay(2500)
         result.collect {
-            Log.d("MutableSharedFlow", "Item2 - $it")
+            Log.d("SharedFlow", "Item2 - $it")
         }
     }
 }
